@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .news-card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .news-card h2 {
+            color: #333;
+        }
+        .news-card p {
+            color: #666;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .read-more:hover {
+            background: #004a99;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>Latest News</header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">World</a>
+        <a href="#">Technology</a>
+        <a href="#">Sports</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="news-card">
+            <h2>Breaking News: Tech Innovations in 2025</h2>
+            <p>The technology sector is evolving rapidly with groundbreaking innovations that will shape the future...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="news-card">
+            <h2>Sports: Champions League Highlights</h2>
+            <p>Catch the latest updates and key moments from the thrilling Champions League matches...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="news-card">
+            <h2>World News: Global Economy Updates</h2>
+            <p>Experts analyze the latest trends impacting the global economy and what lies ahead...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 News Web. All Rights Reserved.
+    </footer>
+</body>
+</html>
