@@ -1,107 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Webpage</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            background: #555;
-            border-radius: 5px;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-        }
-        .news-card {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .news-card h2 {
-            color: #333;
-        }
-        .news-card p {
-            color: #666;
-        }
-        .read-more {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #0066cc;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .read-more:hover {
-            background: #004a99;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>Latest News</header>
-    <nav>
-        <a href="#">Home</a>
+  <head>
+    <title>News Today</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1>News Today</h1>
+        </div>
+        <div class="search-container">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for topics, locations & sources" />
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="header-icons">
+          <i class="fas fa-question-circle"></i>
+          <i class="fas fa-cog"></i>
+          <i class="fas fa-th"></i>
+          <div class="user-avatar">
+            <img src="https://via.placeholder.com/32" alt="User" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="#" class="active">Home</a>
+        <a href="#">For you</a>
+        <a href="#">Following</a>
+        <a href="#">News Showcase</a>
+        <div class="nav-divider"></div>
+        <a href="#">India</a>
         <a href="#">World</a>
+        <a href="#">Local</a>
+        <a href="#">Business</a>
         <a href="#">Technology</a>
+        <a href="#">Entertainment</a>
         <a href="#">Sports</a>
-        <a href="#">Contact</a>
+        <a href="#">Science</a>
+        <a href="#">Health</a>
+      </div>
     </nav>
-    <div class="container">
-        <div class="news-card">
-            <h2>Breaking News: Tech Innovations in 2025</h2>
-            <p>The technology sector is evolving rapidly with groundbreaking innovations that will shape the future...</p>
-            <a href="#" class="read-more">Read More</a>
+
+    <main>
+      <section class="briefing-section">
+        <div class="briefing-header">
+          <h2>Your briefing</h2>
+          <p class="date">Thursday 27 February</p>
         </div>
-        <div class="news-card">
-            <h2>Sports: Champions League Highlights</h2>
-            <p>Catch the latest updates and key moments from the thrilling Champions League matches...</p>
-            <a href="#" class="read-more">Read More</a>
+        <div class="weather-widget">
+          <div class="weather-info">
+            <div class="location">Karnataka <i class="fas fa-map-marker-alt"></i></div>
+            <div class="temperature">29°C</div>
+            <div class="weather-source">weather.com</div>
+          </div>
+          <div class="weather-icon">
+            <i class="fas fa-sun"></i>
+          </div>
         </div>
-        <div class="news-card">
-            <h2>World News: Global Economy Updates</h2>
-            <p>Experts analyze the latest trends impacting the global economy and what lies ahead...</p>
-            <a href="#" class="read-more">Read More</a>
+      </section>
+
+      <div class="content-container">
+        <section class="top-stories">
+          <div class="section-header">
+            <h3>Top stories</h3>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          
+          <div class="news-grid">
+            <div class="main-news">
+              <div class="news-card large">
+                <div class="news-image">
+                    <a href="https://www.hindustantimes.com/india-news/pm-modi-calls-maha-kumbh-maha-yagya-of-unity-hails-yogi-adityanath-govt-101740632487578.html" target="_blank">
+                    
+                  <img src="modi.jpg" alt="News Image" />
+                    </a>
+                  
+                </div>
+                <div class="news-source">
+
+                  <img src="https://via.placeholder.com/20" alt="Source Logo" />
+                  <span>Hindustan Times</span>
+                </div>
+                <h4>PM Modi calls Maha Kumbh 'Maha Yagya of unity', hails Yogi Adityanath govt</h4>
+                <p class="time">2 hours ago</p>
+              </div>
+            </div>
+            
+            <div class="news-list">
+              <div class="news-card">
+                <div class="news-source">
+                  <img src="https://via.placeholder.com/20" alt="Source Logo" />
+                  <span>Moneycontrol</span>
+                </div>
+                <h4>'66 crore people, Rs 3 lakh crore transactions': Grand confluence of faith and economy at Maha Kumbh 2025</h4>
+                <p class="news-meta">52 minutes ago · By Biswajeet Banerjee</p>
+              </div>
+              
+              <div class="news-card">
+                <div class="news-source">
+                  <img src="https://via.placeholder.com/20" alt="Source Logo" />
+                  <span>NDTV</span>
+                </div>
+                <h4>"I Apologise If Arrangements Inadequate": PM Modi As Maha Kumbh Ends</h4>
+                <p class="news-meta">1 hour ago</p>
+              </div>
+              
+              <div class="news-card">
+                <div class="news-source">
+                  <img src="https://via.placeholder.com/20" alt="Source Logo" />
+                  <span>Mint</span>
+                </div>
+                <h4>Mahakumbh 2025: How Hotels, Travel & Food Businesses Cashed In On Opportunity & How VIPs Dented It</h4>
+                <p class="news-meta">56 minutes ago · By Abhinav Trivedi</p>
+              </div>
+              
+              <div class="full-coverage">
+                <i class="fas fa-newspaper"></i>
+                <span>Full coverage</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="local-news">
+          <div class="section-header">
+            <h3>Local news</h3>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          
+          <div class="local-news-list">
+            <div class="news-card">
+              <div class="news-content">
+                <div class="news-source">
+                  <img src="" alt="Source Logo" />
+                  <span>The Hindu</span>
+                </div>
+                <h4>From Darshinis to fine dining, eating out in Bengaluru is getting pricier</h4>
+                <p class="time">6 hours ago</p>
+              </div>
+              <div class="news-thumbnail">
+                <a href="https://www.thehindu.com/news/cities/bangalore/from-darshinis-to-fine-dining-eating-out-in-bengaluru-is-getting-pricier/article69261410.ece"  target="_blank">
+                <img src="hotel.jpg" alt="News Thumbnail" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="news-card">
+              <div class="news-content">
+                <div class="news-source">
+                  <img src="https://via.placeholder.com/20" alt="Source Logo" />
+                  <span>YouTube</span>
+                </div>
+                <h4>How safe is your food? Inside Bengaluru's cloud kitchens</h4>
+                <p class="news-meta">5 hours ago · By Shivani Kava</p>
+              </div>
+              <div class="news-thumbnail">
+                <a href="https://www.thenewsminute.com/long-form/how-safe-is-your-food-inside-bengalurus-cloud-kitchens" target="_blank">
+                <img src="kitchen.avif" alt="News Thumbnail" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="news-card">
+              <div class="news-content">
+                <div class="news-source">
+                  <img src="https://via.placeholder.com/20" alt="Source Logo" />
+                  <span>Bangalore Mirror</span>
+                </div>
+                <h4>In bad taste</h4>
+                <p class="news-meta">7 hours ago · By Sridhar Vivan</p>
+              </div>
+              <div class="news-thumbnail">
+                <img src="https://via.placeholder.com/120x80?text=News" alt="News Thumbnail" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <section class="picks-section">
+        <div class="picks-header">
+          <h3>Picks for you</h3>
+          <i class="fas fa-info-circle"></i>
         </div>
-    </div>
+        <!-- Picks content would go here -->
+      </section>
+    </main>
+
     <footer>
-        &copy; 2025 News Web. All Rights Reserved.
+      <div class="footer-container">
+        <p>&copy; 2025 News Today. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

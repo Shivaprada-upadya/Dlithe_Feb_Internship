@@ -1,0 +1,134 @@
+.todo-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .todo-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .todo-input-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .todo-input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  .todo-input:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+  }
+  
+  .add-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .add-button:hover {
+    background-color: #45a049;
+  }
+  
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .todo-item:hover {
+    background-color: #ececec;
+  }
+  
+  .todo-text {
+    flex-grow: 1;
+    cursor: pointer;
+    padding: 5px;
+    word-break: break-word;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: #777;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .done-button {
+    padding: 5px 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .done-button:hover {
+    background-color: #0b7dda;
+  }
+  
+  .done-button.completed {
+    background-color: #999;
+  }
+  
+  .done-button.completed:hover {
+    background-color: #888;
+  }
+  
+  .delete-button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media (max-width: 500px) {
+    .todo-container {
+      padding: 10px;
+    }
+    
+    .todo-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .button-group {
+      margin-top: 10px;
+      align-self: flex-end;
+    }
+  }
