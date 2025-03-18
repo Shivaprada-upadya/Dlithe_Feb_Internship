@@ -65,8 +65,8 @@ const DATA = [
     {
         email: "user34@gmail.com",
         password: "abc123",
-        fullname: "Noli Enriquez",
-        type: "Checking Peso",
+        fullname: "Shivaprada Upadya",
+        type: "Savings",
         number: "47290539484",
         balance: 837495.38, 
         isAdmin: false, 
