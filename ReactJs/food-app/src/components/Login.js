@@ -1,31 +1,29 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const fakeUsers = [{ username: "user", password: "pass" }];
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = fakeUsers.find((u) => u.username === username && u.password === password);
     if (user) {
       localStorage.setItem("user", username);
-      navigate("/menu");
+      onLogin();
     } else {
       alert("Invalid credentials");
     }
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Username" onChange={(e) => setUsername(e.target.value)} required />
-        <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Login</button>
+        <input className="input-field" placeholder="Username" onChange={(e) => setUsername(e.target.value)} required />
+        <input className="input-field" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
+        <button className="btn"  type="submit">Login</button>
       </form>
     </div>
   );

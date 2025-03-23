@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
@@ -14,9 +14,9 @@ const FoodDetails = () => {
   if (!food) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div className="food-details">
       <h2>{food.strMeal}</h2>
-      <img src={food.strMealThumb} alt={food.strMeal} width={200} />
+      <img src={food.strMealThumb} alt={food.strMeal} className="food-image" />
       <p>{food.strInstructions}</p>
       <Link to="/menu">Back</Link>
     </div>

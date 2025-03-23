@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .form-container {
+    width: 300px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-container {
+    width: 400px;
+    margin: auto;
+  }
+  
+  .food-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .food-item {
+    background: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  

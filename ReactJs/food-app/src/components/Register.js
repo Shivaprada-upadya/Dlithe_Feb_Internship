@@ -14,14 +14,14 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Username" onChange={(e) => setUsername(e.target.value)} required />
-        <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Register</button>
+        <input className="input-field" placeholder="Username" onChange={(e) => setUsername(e.target.value)} required />
+        <input className="input-field" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
+        <button className="btn" type="submit">Register</button>
       </form>
-      <Link to="/login">Login</Link>
+      <Link to="/login">Already have an account? Login</Link>
     </div>
   );
 };
